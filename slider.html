@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <title>JS Slider</title>
+</head>
+<body>
+    <nav>
+        <p class="logo">jav<span>a</span>script</p>
+        <ul>
+            <li class="active"><a href="index.html">Учебник</a></li>
+            <li><a href="table.html">Генератор таблиц</a></li>
+            <li><a href="#">Форум</a></li>
+            <li><a href="#">ES5</a></li>
+            <li><a href="#">Тесты знаний</a></li>
+            <li><a href="#">Стажировки</a></li>
+            <li><a href="#">Скринкасты</a></li>
+        </ul>
+        <input class="purchase" type="button" value="Купить EPUB/PDF" />
+        <div class="login"><a href="#"><i class="fas fa-user"></i></a></div>
+        <div class="search"><a href="#"><i class="fas fa-search"></i></a></div>
+    </nav>
+    <div class="progress-bar"></div>
+    <div class="main-container">
+        <input id="hamburger-trigger" type="checkbox">
+        <aside>
+            <div class="aside-content">
+            <section>
+                <p>Раздел</p>
+                <ul>
+                    <li><a href="#">Введение</a></li>
+                </ul>
+            </section>
+            <section>
+                <form>
+                    <p>Герератор чисел</p>
+                    <label for="cols">Введите № колонок:</label>
+                    <input id="cols" type="text">
+                    <label for="rows">Введите № строк:</label>
+                    <input id="rows" type="text">
+                    <input onclick="buildTable()" value="Сгенерировать" type="button">
+                </form>
+            </section>
+            <section>
+                <p>Поделиться</p>
+                <div class="social-media">
+                    <img class="facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/256px-Facebook_icon.svg.png" alt="facebook"></img>
+                    <img class="twitter" src="http://pngimg.com/uploads/twitter/twitter_PNG34.png" alt="twitter"></img>
+                    <img class="linkedin" src="https://www.freeiconspng.com/uploads/images-linkedin-logo-png-14.png" alt="linkedin"></img>
+                    <img class="google" src="http://www.free-icons-download.net/images/red-google+-logo-icon-65534.png" alt="google"></img>
+                </div>
+            </section>
+            <section class="github">
+                <a href="#">Редактировать на GitHub</a>
+            </section>
+            </div>
+        </aside>
+        <label for="hamburger-trigger"><div class="hamburger"><i class="fas fa-bars"></i></div></label>
+        <div class="main-content">
+            <section>
+               <div id="slider-wrapper">
+                    <ul class="slider">
+                        <li class="img-wrapper"><img src="https://www.besthdwallpaper.com/download/vulture-wallpaper-1280x720-1290_45.jpg" alt="A vulture" class="slider-img"></li>
+                        <li class="img-wrapper active"><img src="http://baby-mama58.ru/download/cheetah_lying-1280x720.jpg" alt="A cheetah" class="slider-img"></li>
+                        <li class="img-wrapper"><img src="http://www.sciencemag.org/sites/default/files/styles/article_main_large/public/_fox_16x9.jpg?itok=50Be3taF" alt="A fox" class="slider-img"></li>
+                        <li class="img-wrapper"><img src="http://acdsnet.weebly.com/uploads/5/2/9/5/52955411/817721187_orig.jpg" alt="A bat" class="slider-img"></li>
+                        <li class="img-wrapper"><img src="https://images.stv.tv/articles/w1280xh720xmFit/556514-a-badger.jpg" alt="A badger" class="slider-img"></li>
+                        <li class="img-wrapper"><img src="https://assets.bowhunting.com/wp-content/uploads/2015/06/wolf-running.jpg" alt="A wolf" class="slider-img"></li>
+                    </ul>
+                    <div class="prev-img"><i class="fas fa-angle-left"></i></div>
+                    <div class="next-img"><i class="fas fa-angle-right"></i></div>
+               </div>
+            </section>
+            <footer>
+                    <p>© 2007—2018  Илья Кантор | <a href="#">связаться с нами</a> | <a href="#">о проекте</a> | <a href="#">соглашение</a> | # <a href="#">slack-чат</a></p>
+                    <p>powered by <a href="#">node.js</a> &amp; <a href="#">open source</a></p>
+            </footer>
+        </div>
+    </div>
+
+    <script src="slider.js"></script>
+</body>
+</html>
