@@ -33,21 +33,27 @@ a {
     }
 }
 
-#slider {
+.infinateSlider {
     margin: 0 auto;
     position: relative;
     height: 417px;
     width: 740px;
+    margin-bottom: 15px;
+    margin-top: 15px;
     .slider-wrapper {
+        margin: 0 auto;
         overflow: hidden;
         width: 740px;
+        height: 417px;
         .slider-content {
             width: 9999px;
+            height: 417px;
             list-style: none;
             margin: 0;
             padding: 0;
             font-size: 0;
             .img-wrapper {
+                height: 417px;
                 font-size: 14px;
                 display: inline-block;
                 transition: margin-left 0.3s ease;
@@ -55,42 +61,87 @@ a {
                 .slider-img {
                     display: block;
                     width: 740px;
+                    height: auto;
                     margin: 0;
                 }
            }
         }
     }
     .prev-img {
-        // width: 50px;
+        width: 50px;
         font-size: 2.5em;
         position: absolute;
-        left: 2%;
+        left: 0;
+        padding-left: 13px;
         bottom: 45%;
         color: #fff;
         opacity: 0.7;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.95;
+            background: rgba(0, 0, 0, 0.4);
+            border-top-right-radius: 10px;
+            border-bottom-right-radius: 10px;
+        }
     }
     .next-img {
-        // width: 50px;
+        width: 50px;
         font-size: 2.5em;
         position: absolute;
-        right: 2%;
+        right: 0;
+        padding-left: 13px;
         bottom: 45%;
         color: #fff;
         opacity: 0.7;
+        cursor: pointer;
+        &:hover {
+            opacity: 0.95;
+            background: rgba(0, 0, 0, 0.4);
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+        }
     }
     .bullets {
         position: absolute;
         list-style: none;
-        right: 45%;
-        bottom: 3%;
+        width: 100%;
+        bottom: 0;
         margin: 0;
         padding: 0;
+        background: none;
+        height: 40px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &:hover {
+            background: rgba(0, 0, 0, 0.4);
+        }
         li {
+            padding-left: 5px;
             display: inline-block;
             color: #fff;
             font-size: 0.8em;
             opacity: 0.7;
+            cursor: pointer;
+            &:hover {
+                opacity: 0.95;
+            }
         }
+    }
+    .slide-title {
+        width: 100%;
+        height: 40px;
+        line-height: 40px;
+        background: rgba(0, 0, 0, 0.4);
+        position: absolute;
+        margin: 0;
+        text-align: center;
+        color: #fff;
+        opacity: 0;
+    }
+    .active {
+        opacity: 1;
+        transition: opacity 0.35s;
     }
 }
 

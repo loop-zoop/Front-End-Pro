@@ -12,9 +12,9 @@
     <nav>
         <p class="logo">jav<span>a</span>script</p>
         <ul>
-            <li class="active"><a href="index.html">Учебник</a></li>
+            <li><a href="index.html">Учебник</a></li>
             <li><a href="table.html">Генератор таблиц</a></li>
-            <li><a href="#">Форум</a></li>
+            <li class="active"><a href="slider.html">Слайдер</a></li>
             <li><a href="#">ES5</a></li>
             <li><a href="#">Тесты знаний</a></li>
             <li><a href="#">Стажировки</a></li>
@@ -36,16 +36,6 @@
                 </ul>
             </section>
             <section>
-                <form>
-                    <p>Герератор чисел</p>
-                    <label for="cols">Введите № колонок:</label>
-                    <input id="cols" type="text">
-                    <label for="rows">Введите № строк:</label>
-                    <input id="rows" type="text">
-                    <input onclick="buildTable()" value="Сгенерировать" type="button">
-                </form>
-            </section>
-            <section>
                 <p>Поделиться</p>
                 <div class="social-media">
                     <img class="facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/256px-Facebook_icon.svg.png" alt="facebook"></img>
@@ -62,7 +52,9 @@
         <label for="hamburger-trigger"><div class="hamburger"><i class="fas fa-bars"></i></div></label>
         <div class="main-content">
             <section>
-              <div id="slider">
+
+              <div class="infinateSlider" id="animalSlider">
+                  <p class="slide-title">Text</p>
                  <div class="slider-wrapper">
                       <ul class="slider-content">
                           <li class="img-wrapper"><img src="https://www.besthdwallpaper.com/download/vulture-wallpaper-1280x720-1290_45.jpg" alt="A vulture" class="slider-img"></li>
@@ -75,15 +67,26 @@
                   </div>
                 <div class="prev-img"><i class="fas fa-angle-left"></i></div>
                 <div class="next-img"><i class="fas fa-angle-right"></i></div>
-                <ul class="bullets">
-                    <li><i class="fas fa-circle"></i></li>
-                    <li><i class="far fa-circle"></i></li>
-                    <li><i class="far fa-circle"></i></li>
-                    <li><i class="far fa-circle"></i></li>
-                    <li><i class="far fa-circle"></i></li>
-                    <li><i class="far fa-circle"></i></li>
-                </ul>
             </div>
+
+            <div class="infinateSlider" id="natureSlider">
+                    <p class="slide-title">Text</p>
+                   <div class="slider-wrapper">
+                        <ul class="slider-content">
+                            <li class="img-wrapper"><img src="http://ichef.bbci.co.uk/wwfeatures/wm/live/1280_720/images/live/p0/32/gt/p032gtyx.jpg" alt="Forest" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="http://s1.1zoom.me/big0/642/Denmark_Scenery_Sunrises_and_sunsets_Rivers_Sky_513662_1280x720.jpg" alt="Fields in Denmark" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="http://t.wallpaperweb.org/wallpaper/nature/1280x720/canadanaturecornerwallpaper10144_1280x720.jpg" alt="Mountain lake in Canada" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="https://i.ytimg.com/vi/OmpUaZnKlj0/maxresdefault.jpg" alt="Beach sunset" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="https://www.hdwallpapers.in/download/nature_beach-1280x720.jpg" alt="Tropics" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="https://wallpapershome.com/images/wallpapers/isle-of-skye-1280x720-scotland-europe-nature-travel-8k-14973.jpg" alt="Isle of Skyle in Scotland" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="https://www.artinnaturephotography.com/images/xl/kofa-mountains-yucca-sunrise-20161124_6192.jpg" alt="Desert" class="slider-img"></li>
+                            <li class="img-wrapper"><img src="http://www.checeylon.com/images/gallery/nature-4.jpg" alt="Waterfall" class="slider-img"></li>
+                        </ul>
+                    </div>
+                  <div class="prev-img"><i class="fas fa-angle-left"></i></div>
+                  <div class="next-img"><i class="fas fa-angle-right"></i></div>
+              </div>
+
             </section>
             <footer>
                     <p>© 2007—2018  Илья Кантор | <a href="#">связаться с нами</a> | <a href="#">о проекте</a> | <a href="#">соглашение</a> | # <a href="#">slack-чат</a></p>
