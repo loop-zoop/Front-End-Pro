@@ -261,6 +261,33 @@ nav ul li,
   width: 100%;
   height: 4px;
   background: #e1e0de;
+  position: relative;
+}
+
+.progress-bar .progress-bar-content {
+  position: absolute;
+  height: 4px;
+  background: #b8d0b1;
+  -webkit-animation: reverseProgressBar 3s linear;
+          animation: reverseProgressBar 3s linear;
+}
+
+@-webkit-keyframes reverseProgressBar {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
+}
+
+@keyframes reverseProgressBar {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: 0%;
+  }
 }
 
 .hamburger {
@@ -455,6 +482,48 @@ nav ul li,
   .main-container .main-content section {
     padding: 50px 10px 0 10px;
   }
+}
+
+.main-container .main-content .article {
+  background: #f5f2f0;
+  border-radius: 15px;
+  padding: 20px;
+  height: 180px;
+  margin: 25px 0;
+  opacity: 1;
+  overflow: hidden;
+}
+
+.main-container .main-content .article img {
+  display: block;
+  width: 130px;
+  float: left;
+  margin: 0 15px;
+  opacity: 1;
+}
+
+.main-container .main-content .article p {
+  opacity: 1;
+  overflow: hidden;
+}
+
+.main-container .main-content #mySection .removed-img {
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  width: 0;
+}
+
+.main-container .main-content #mySection .removed-text {
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  opacity: 0;
+}
+
+.main-container .main-content #mySection .removed-box {
+  -webkit-transition: 2.5s;
+  transition: 2.5s;
+  height: 0;
+  padding: 0;
 }
 
 .main-container .main-content #gen-table {

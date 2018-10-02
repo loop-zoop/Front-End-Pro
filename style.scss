@@ -219,6 +219,22 @@ nav ul li,
     width: 100%;
     height: 4px;
     background: #e1e0de;
+    position: relative;
+    .progress-bar-content {
+        position: absolute;
+        height: 4px;
+        background: #b8d0b1;
+        animation: reverseProgressBar 3s linear;
+    }
+}
+
+@keyframes reverseProgressBar {
+    0% {
+        width: 100%;
+    }
+    100% {
+        width: 0%;
+    }
 }
 
 .hamburger {
@@ -375,6 +391,44 @@ nav ul li,
                 padding: 50px 10px 0 10px;
             }
         }
+        .article {
+            background: #f5f2f0;
+            border-radius: 15px;
+            padding: 20px;
+            height: 180px;
+            margin: 25px 0;
+            opacity: 1;
+            overflow: hidden;
+            img {
+                display: block;
+                width: 130px;
+                float: left;
+                margin: 0 15px;
+                opacity: 1;
+            }
+            p {
+                opacity: 1;
+                overflow: hidden;
+            }
+        }
+        #mySection {
+            .removed-img {
+                transition: 2.5s;
+                width: 0;
+
+            }
+            .removed-text {
+                transition: 2.5s;
+                opacity: 0;
+            }
+            .removed-box {
+                transition: 2.5s;
+                height: 0;
+                // margin: 0;
+                padding: 0;
+            }
+        }
+
         #gen-table {
             margin: 0 auto;
             border: 1px solid #000;
