@@ -8,6 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <title>JavaScript</title>
 
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
+
 </head>
 <body onload="Clock()">
     <nav>
@@ -21,8 +23,11 @@
             <li><a href="#">Стажировки</a></li>
             <li><a href="#">Скринкасты</a></li>
         </ul>
-        <input class="purchase" type="button" value="Купить EPUB/PDF" />
-        <div class="login"><a href="#"><i class="fas fa-user"></i></a></div>
+        <!-- <input class="purchase" type="button" value="Купить EPUB/PDF" />
+        <div class="login"><a href="#"><i class="fas fa-user"></i></a></div> -->
+        <div>
+            <input id="searchTextField" type="text" size="50" placeholder="Введите город" autocomplete="on">
+        </div>
         <div class="search"><a href="#"><i class="fas fa-search"></i></a></div>
     </nav>
     <div class="progress-bar"></div>
@@ -74,7 +79,10 @@
         <label for="hamburger-trigger"><div class="hamburger"><i class="fas fa-bars"></i></div></label>
         <div class="main-content">
             <section>
-                <p id="window-resize"></p>
+                <div class='additional_block' id="weather">
+                    <p><strong>Weather</strong></p>
+                </div>
+                <p class='additional_block' id="window-resize"></p>
                 <h1>Введение в JavaScript</h1>
                 <p>Давайте посмотрим, что такого особенного в JavaScript, почему именно он, и какие еще технологии существуют, кроме JavaScript.</p>
                 <h2><a name="introduction">Что такое JavaScript?</a></h2>
@@ -176,5 +184,6 @@
     <script src="clock.js"></script>
     <script src="windowSize.js"></script>
     <script src="timer.js"></script>
+    <script src="weather.js"></script>
 </body>
 </html>
