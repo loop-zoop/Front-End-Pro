@@ -7,22 +7,22 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
     <link rel="stylesheet" href="style.css">
     <title>JavaScript</title>
-
+    <link href="https://fonts.googleapis.com/css?family=Catamaran:100" rel="stylesheet"> 
+    <script src="http://maps.googleapis.com/maps/api/js?sensor=false&amp;libraries=places" type="text/javascript"></script>
 </head>
 <body>
     <nav>
         <p class="logo">jav<span>a</span>script</p>
         <ul>
-            <li class="active"><a href="#">Учебник</a></li>
+            <li class="active"><a href="index.html">Учебник</a></li>
             <li><a href="table.html">Генератор таблиц</a></li>
             <li><a href="slider.html">Слайдер</a></li>
-            <li><a href="#">ES5</a></li>
-            <li><a href="#">Тесты знаний</a></li>
-            <li><a href="#">Стажировки</a></li>
-            <li><a href="#">Скринкасты</a></li>
+            <li><a href="promises.html">Промисы</a></li>
         </ul>
-        <input class="purchase" type="button" value="Купить EPUB/PDF" />
-        <div class="login"><a href="#"><i class="fas fa-user"></i></a></div>
+        <div id="weather"></div>
+        <div>
+            <input id="searchTextField" type="text" size="50" placeholder="Введите город" autocomplete="on">
+        </div>
         <div class="search"><a href="#"><i class="fas fa-search"></i></a></div>
     </nav>
     <div class="progress-bar"><div class="progress-bar-content"></div></div>
@@ -88,5 +88,6 @@
     </div>
 
     <script src="pormises.js"></script>
+    <script src="weather.js"></script>
 </body>
 </html>

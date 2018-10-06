@@ -1,39 +1,65 @@
 let weatherHolder = document.getElementById('weather');
 
 function initialize() {
-    var input = document.getElementById('searchTextField');
-    var options = {
+    let input = document.getElementById('searchTextField');
+    let options = {
         types: ['(cities)']
     };
 
-    var autocomplete = new google.maps.places.Autocomplete(input);
+    let autocomplete = new google.maps.places.Autocomplete(input);
+
+    if (localStorage.length !== 0) {
+        let cachedCoordinates = localStorage.getItem('lastSearch').split(',');
+        drawResponse(sendRequest(cachedCoordinates[0], cachedCoordinates[1]));
+    }
 
     google.maps.event.addListener(autocomplete, 'place_changed', function() {
-        var place = autocomplete.getPlace();
-        sendRequest(place.geometry.location.lat(), place.geometry.location.lng());
+        let place = autocomplete.getPlace();
+        let coordinates = [place.geometry.location.lat(), place.geometry.location.lng()]
+        cache('lastSearch', coordinates);
+        drawResponse(sendRequest(coordinates[0], coordinates[1]));
     });
 
 }
 google.maps.event.addDomListener(window, 'load', initialize);
 
-
+function cache(key, value) {
+    localStorage.setItem(key, value);
+}
 
 function sendRequest(lat, lng) {
-    console.log('Hi!')
     let xhr = new XMLHttpRequest();
 
     xhr.open('GET', `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&appid=29d9a2bed1e5350709bc3341f20c66bf`, false);
     xhr.send();
     if (xhr.status != 200) {
-        console.log(xhr.statusText);
+        return xhr.statusText;
       } else {
         let weatherData = JSON.parse(xhr.responseText);
-        let cityName = weatherData.name;
-        let tempF = (1.8 * (+weatherData.main.temp - 273) + 32).toFixed(2) + 'F';
-        let tempC = (+weatherData.main.temp - 273).toFixed(2) + 'C';
-        let weather = weatherData.weather[0].main;
-        console.log(weatherData);
-        msg = `<p>City: ${cityName}</p><p>Weather: ${weather}</p><p>Temprature: ${tempF} / ${tempC}</p>`
-        weatherHolder.innerHTML = msg;
+        return weatherData;
       }
+}
+
+function drawResponse(data) {
+    if (typeof data === 'string' || data instanceof String) {
+        weatherHolder.innerHTML = data;
+    }
+    else {
+        let cityName = data.name;
+        let tempF = (1.8 * (+data.main.temp - 273) + 32).toFixed(2);
+        let tempC = (+data.main.temp - 273).toFixed(2);
+        let humidity = data.main.humidity;
+        let wind = data.wind.speed;
+        let weather = data.weather[0].description;
+        let iconID = data.weather[0].icon;
+        let msg = `<div>
+                        <p id="city"><strong>${cityName}</strong></p>
+                        <p id="description"><img src="http://openweathermap.org/img/w/${iconID}.png" /> <span>${weather}</span></p>
+                    </div>
+                    <div>
+                        <p><span class="temp">${tempF}</span> °F <strong>|</strong> <span class="temp">${tempC}</span> °C</p>
+                        <p><span>Wind: ${wind} km/h<span> <strong>|</strong> <span>Humidity: ${humidity}%<span></p>
+                    </div>`
+        weatherHolder.innerHTML = msg;
+    }
 }
