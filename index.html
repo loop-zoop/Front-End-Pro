@@ -24,7 +24,7 @@
         <div class="login"><a href="#"><i class="fas fa-user"></i></a></div> -->
         <div id="weather"></div>
         <div>
-            <input id="searchTextField" type="text" size="50" placeholder="Введите город" autocomplete="on">
+            <input id="searchTextField" onfocus="this.value=''" type="text" size="50" placeholder="Введите город" autocomplete="on">
         </div>
         <div class="search"><a href="#"><i class="fas fa-search"></i></a></div>
     </nav>
@@ -68,9 +68,6 @@
             </section>
             <section class="github">
                 <a href="#">Редактировать на GitHub</a>
-            </section>
-            <section>
-                <p id="timer"><span id="timer_minutes"></span>:<span id="timer_seconds"></span></p>
             </section>
             </div>
         </aside>
@@ -170,8 +167,8 @@
                 <div class="important">Тенденция: всё идет к полной совместимости со стандартом.</div>
             </section>
             <footer>
-                    <p>© 2007—2018  Илья Кантор | <a href="#">связаться с нами</a> | <a href="#">о проекте</a> | <a href="#">соглашение</a> | # <a href="#">slack-чат</a></p>
-                    <p>powered by <a href="#">node.js</a> &amp; <a href="#">open source</a></p>
+                <p id="timer"><span id="timer_minutes"></span>:<span id="timer_seconds"></span></p>
+                <p>Нажмите <strong>Esc</strong>, чтобы сбросить таймер</p>
             </footer>
         </div>
     </div>

@@ -2,6 +2,7 @@ let weatherHolder = document.getElementById('weather');
 
 function initialize() {
     let input = document.getElementById('searchTextField');
+    input.value = '';
     let options = {
         types: ['(cities)']
     };

@@ -21,7 +21,7 @@
         </ul>
         <div id="weather"></div>
         <div>
-            <input id="searchTextField" type="text" size="50" placeholder="Введите город" autocomplete="on">
+            <input id="searchTextField" onfocus="this.value=''" type="text" size="50" placeholder="Введите город" autocomplete="on">
         </div>
         <div class="search"><a href="#"><i class="fas fa-search"></i></a></div>
     </nav>
@@ -53,10 +53,10 @@
             <section>
                 <p>Поделиться</p>
                 <div class="social-media">
-                    <img class="facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/256px-Facebook_icon.svg.png" alt="facebook"></img>
-                    <img class="twitter" src="http://pngimg.com/uploads/twitter/twitter_PNG34.png" alt="twitter"></img>
-                    <img class="linkedin" src="https://www.freeiconspng.com/uploads/images-linkedin-logo-png-14.png" alt="linkedin"></img>
-                    <img class="google" src="http://www.free-icons-download.net/images/red-google+-logo-icon-65534.png" alt="google"></img>
+                    <img class="facebook" src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1b/Facebook_icon.svg/256px-Facebook_icon.svg.png" alt="facebook">
+                    <img class="twitter" src="http://pngimg.com/uploads/twitter/twitter_PNG34.png" alt="twitter">
+                    <img class="linkedin" src="https://www.freeiconspng.com/uploads/images-linkedin-logo-png-14.png" alt="linkedin">
+                    <img class="google" src="http://www.free-icons-download.net/images/red-google+-logo-icon-65534.png" alt="google">
                 </div>
             </section>
             <section class="github">
@@ -81,13 +81,14 @@
                 </div>
             </section>
             <footer>
-                    <p>© 2007—2018  Илья Кантор | <a href="#">связаться с нами</a> | <a href="#">о проекте</a> | <a href="#">соглашение</a> | # <a href="#">slack-чат</a></p>
-                    <p>powered by <a href="#">node.js</a> &amp; <a href="#">open source</a></p>
+                <p id="timer"><span id="timer_minutes"></span>:<span id="timer_seconds"></span></p>
+                <p>Нажмите <strong>Esc</strong>, чтобы сбросить таймер</p>
             </footer>
         </div>
     </div>
 
     <script src="pormises.js"></script>
     <script src="weather.js"></script>
+    <script src="timer.js"></script>
 </body>
 </html>
