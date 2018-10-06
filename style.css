@@ -173,7 +173,7 @@ a:hover {
 }
 
 nav {
-  height: 60px;
+  height: 80px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -196,7 +196,7 @@ nav .logo span {
 }
 
 nav ul {
-  width: 65%;
+  width: 35%;
   padding: 0;
   margin: 0;
 }
@@ -247,6 +247,53 @@ nav .search i {
 nav .login i:hover,
 nav .search i:hover {
   color: #646361;
+}
+
+nav #weather {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: cross-start;
+      -ms-flex-align: cross-start;
+          align-items: cross-start;
+  font-family: 'Catamaran', sans-serif;
+  font-size: 0.9em;
+  margin-right: 20px;
+}
+
+nav #weather div {
+  margin-right: 20px;
+  text-align: left;
+}
+
+nav #weather div:first-child {
+  text-align: right;
+}
+
+nav #weather p {
+  margin: 0;
+}
+
+nav #weather #city {
+  font-size: 1.3em;
+}
+
+nav #weather .temp {
+  font-size: 1.4em;
+  color: #be1622;
+}
+
+nav #weather #description {
+  margin-top: -15px;
+  text-align: right;
+}
+
+nav #weather img {
+  vertical-align: middle;
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  margin: 0;
 }
 
 nav p,

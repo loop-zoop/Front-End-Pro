@@ -146,7 +146,7 @@ a {
 }
 
 nav {
-    height: 60px;
+    height: 80px;
     display: flex;
     align-items: center;
     .logo {
@@ -161,7 +161,7 @@ nav {
         }
     }
     ul {
-        width: 65%;
+        width: 35%;
         padding: 0;
         margin: 0;
         li {
@@ -203,6 +203,41 @@ nav {
         font-size: 1.4em;
         &:hover {
             color: #646361;
+        }
+    }
+    #weather {
+        display: flex;
+        align-items: cross-start;
+        font-family: 'Catamaran', sans-serif;
+        font-size: 0.9em;
+        margin-right: 20px;
+        div {
+            &:first-child {
+                text-align: right;
+            }
+            margin-right: 20px;
+            text-align: left;
+        }
+        p {
+            margin: 0;
+        }
+        #city {
+            font-size: 1.3em;
+        }
+        .temp {
+            font-size: 1.4em;
+            color: #be1622;
+        }
+        #description {
+            margin-top: -15px;
+            text-align: right;
+        }
+        img {
+            vertical-align: middle;
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            margin: 0;
         }
     }
 }
